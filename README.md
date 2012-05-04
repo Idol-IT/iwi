@@ -1,4 +1,4 @@
-webimage
+iwi
 ========
 
 Idol Web Image Модуль для работы с изображениями
