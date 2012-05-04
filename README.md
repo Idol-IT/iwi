@@ -2,7 +2,9 @@ iwi
 ========
 
 Idol Web Image Модуль для работы с изображениями.
-Доступны два способа: Resize и adaptiveResize.
+Доступны два способа:  
+* Resize  
+* adaptiveResize
 
 
 Установка
@@ -11,9 +13,10 @@ Idol Web Image Модуль для работы с изображениями.
 1. Загрузить дамп.
 2. Подключить в конфиге
 
-    'thumb' => array(
-                'class' => 'ext.phpthumb.EasyPhpThumb',
-    ),
+        'thumb' => array(
+                    'class' => 'ext.phpthumb.EasyPhpThumb',
+        ),
+3. Радоваться
 
 
 Пример использования
