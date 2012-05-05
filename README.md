@@ -15,7 +15,7 @@ Idol Web Image Модуль для работы с изображениями.
 2. Подключить в конфиге:
 
         'thumb' => array(
-                    'class' => 'ext.phpthumb.EasyPhpThumb',
+                    'class' => 'ext.iwi.phpthumb.EasyPhpThumb',
         ),
 3. Радоваться
 
