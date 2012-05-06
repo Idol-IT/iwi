@@ -1,26 +1,26 @@
 iwi
 ========
 
-Idol Web Image Модуль для работы с изображениями.
+Idol Web Image module for adaptive image resizing.
 
-Доступны два способа:  
-* Resize - изменяет размер без учёта соотношения сторон.
-* adaptiveResize - с учётом соотношения сторон, использует crop по центру при необходимости.
+Two methods are available:  
+* Resize - changes the size without width and height ratio.
+* adaptiveResize - changes the size with width and height ratio, also crops center of the image.
 
 
-Установка
+Installation
 =========
 
-1. Загрузить дамп.
-2. Подключить в конфиге:
+1. Import SQL dump to MySQL DB.
+2. configuration (protected/config/main.php):
 
         'thumb' => array(
                     'class' => 'ext.iwi.phpthumb.EasyPhpThumb',
         ),
-3. Радоваться
+3. Enjoy
 
 
-Пример использования
+Example
 ====================
 
     <?php $this->widget("ext.iwi.Resize",array(
