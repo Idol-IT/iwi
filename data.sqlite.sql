@@ -2,10 +2,3 @@ CREATE TABLE storage (
     key VARCHAR(100),
     value VARCHAR(512)
 );
-
-CREATE TABLE storage (
-    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(128) NOT NULL,
-    password VARCHAR(128) NOT NULL,
-    email VARCHAR(128) NOT NULL
-);
