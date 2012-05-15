@@ -1,7 +1,7 @@
 iwi
 ========
 
-Idol Web Image module for adaptive image resizing and caching in database based on Kohana Image module.
+Idol Web Image module for adaptive image resizing and caching in database, based on Kohana Image module.
 
 Next methods are available:
 * crop()
@@ -11,7 +11,7 @@ Next methods are available:
 * quality()
 * render()
 * save()
-* cache()
+* cache() requires a database
 
 [Detailed documentation](http://docs.kohanaphp.com/libraries/image)
 
@@ -33,6 +33,7 @@ Usage
 ====================
 
     // loading
+    Yii::import('ext.iwi.Iwi');
     $picture = new Iwi('images/sample.jpg');
     $picture->resize(100,100, Iwi::NONE);
     echo $picture->cache();
