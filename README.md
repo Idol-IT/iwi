@@ -46,7 +46,7 @@ Deprecated
 
 Widget Resize is now derpecated.
 
-    $this->widget("ext.iwi.Resize");
+    <strike>$this->widget("ext.iwi.Resize");</strike>
 
 
 Changelog
@@ -56,7 +56,7 @@ Changelog
 
 * Version 1.1 release
 * New api
-* New ImageMagick support
+* ImageMagick support
 * There is no need to perform a dump, it is performed automatically
 
 
