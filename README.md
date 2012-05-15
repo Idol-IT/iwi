@@ -17,8 +17,9 @@ Next methods are available:
 
 Installation
 =========
+1.Place 'iwi' folder into 'protected/extensions/'
 
-Configuration (protected/config/main.php):
+2.Configuration (protected/config/main.php):
 
     'iwi' => array(
         'class' => 'application.extensions.iwi.IwiComponent',
