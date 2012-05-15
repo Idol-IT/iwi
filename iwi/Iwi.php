@@ -35,7 +35,7 @@ class Iwi extends Image
         $folder[] = substr($this->hash(), 0, 2);
         $folder[] = substr($this->hash(), 2, 2);
 
-        $path[] = "images/site/cache";
+        $path[] = Yii::app()->createUrl("images/site/cache");
         $path[] = substr($this->hash(), 0, 2);
         $path[] = substr($this->hash(), 2, 2);
 
