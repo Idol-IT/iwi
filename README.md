@@ -1,31 +1,55 @@
 iwi
 ========
 
-Idol Web Image module for adaptive image resizing.
+Idol Web Image module for adaptive image resizing and caching in database based on Kohana Image module.
 
-Two methods are available:  
-* Resize - changes the size without width and height ratio.
-* adaptiveResize - changes the size with width and height ratio, also crops center of the image.
+Next methods are available:
+* crop()
+* rotate()
+* flip()
+* sharpen()
+* quality()
+* render()
+* save()
+* cache()
 
+[Detailed documentation](http://docs.kohanaphp.com/libraries/image)
 
 Installation
 =========
 
-1. Import SQL dump to MySQL DB.
-2. configuration (protected/config/main.php):
+Configure (protected/config/main.php):
 
-        'thumb' => array(
-                    'class' => 'ext.iwi.phpthumb.EasyPhpThumb',
-        ),
-3. Enjoy
+    'iwi' => array(
+        'class' => 'application.extensions.iwi.IwiComponent',
+        // GD or ImageMagick
+        'driver' => 'GD',
+        // ImageMagick setup path
+        //'params'=>array('directory'=>'C:/ImageMagick'),
+    ),
 
 
-Example
+Usage
 ====================
 
-    <?php $this->widget("ext.iwi.Resize",array(
-                                'method' => 'adaptiveResize',
-                                'path' => "/images/banner-01.jpg",
-                                'x' => 100,
-                                'y' => 100
-                            ));  ?>
+
+    // loading
+    $picture = new Iwi('images/sample.jpg');
+    $picture->resize(100,100, Iwi::NONE);
+    echo $picture->cache();
+
+    // chainable usage in template
+    echo Yii::app()->iwi->load("images/totem.png")->crop(70,121,'center')->cache();
+
+
+Deprecated
+====================
+
+Widget Resize is now derpecated.
+
+    $this->widget("ext.iwi.Resize");
+
+
+Changelog
+=====================
+
