@@ -40,7 +40,7 @@ Usage
     echo $picture->cache();
 
     // chainable usage in template
-   <img src="<?php echo Yii::app()->iwi->load("images/sample.png")->crop(70,121,'center')->cache(); ?>"/>
+    echo Yii::app()->iwi->load("images/totem.png")->crop(70,121,'center')->cache();
 
 
 Deprecated
