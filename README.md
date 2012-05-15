@@ -46,7 +46,7 @@ Deprecated
 
 Widget Resize is now derpecated.
 
-    <strike>$this->widget("ext.iwi.Resize");</strike>
+    $this->widget("ext.iwi.Resize");
 
 
 Changelog
