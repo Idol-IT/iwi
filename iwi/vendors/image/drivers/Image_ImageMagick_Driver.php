@@ -10,6 +10,8 @@
  * @copyright  (c) 2007-2008 Kohana Team
  * @license    http://kohanaphp.com/license.html
  */
+Yii::import('application.extensions.iwi.vendors.image.CArray');
+
 class Image_ImageMagick_Driver extends Image_Driver {
 
 	// Directory that IM is installed in
