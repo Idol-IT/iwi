@@ -52,19 +52,19 @@ Widget Resize is now derpecated.
 Changelog
 =====================
 
-May 15, 2012
---------------------
+#### May 15, 2012
+
 * Version 1.1 release
 * New api
 * New ImageMagick support
 * There is no need to perform a dump, it is performed automatically
 
 
-May 10, 2012
----------------------
+#### May 10, 2012
+
 * SQLite database support
 
 
-May 4, 2012
----------------------
+#### May 4, 2012
+
 * Release of 1.0 version
