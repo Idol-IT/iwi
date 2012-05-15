@@ -18,7 +18,7 @@ Next methods are available:
 Installation
 =========
 
-Configure (protected/config/main.php):
+Configuration (protected/config/main.php):
 
     'iwi' => array(
         'class' => 'application.extensions.iwi.IwiComponent',
@@ -31,7 +31,6 @@ Configure (protected/config/main.php):
 
 Usage
 ====================
-
 
     // loading
     $picture = new Iwi('images/sample.jpg');
@@ -53,3 +52,19 @@ Widget Resize is now derpecated.
 Changelog
 =====================
 
+May 15, 2012
+--------------------
+* Version 1.1 release
+* New api
+* New ImageMagick support
+* There is no need to perform a dump, it is performed automatically
+
+
+May 10, 2012
+---------------------
+* SQLite database support
+
+
+May 4, 2012
+---------------------
+* Release of 1.0 version
