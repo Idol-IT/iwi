@@ -44,9 +44,10 @@ Usage
 Deprecated
 ====================
 
+    $this->widget("ext.iwi.Resize");
+
 Widget Resize is now derpecated.
 
-    $this->widget("ext.iwi.Resize");
 
 
 Changelog
