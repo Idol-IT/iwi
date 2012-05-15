@@ -14,7 +14,7 @@ class Iwi extends Image
                 $this->save($path);
             }
         }
-        return $path;
+        return Yii::app()->createUrl($path);
     }
 
     public function buildPath()
@@ -35,7 +35,7 @@ class Iwi extends Image
         $folder[] = substr($this->hash(), 0, 2);
         $folder[] = substr($this->hash(), 2, 2);
 
-        $path[] = Yii::app()->createUrl("images/site/cache");
+        $path[] = "images/site/cache";
         $path[] = substr($this->hash(), 0, 2);
         $path[] = substr($this->hash(), 2, 2);
 
