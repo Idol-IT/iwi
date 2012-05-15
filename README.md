@@ -3,7 +3,7 @@ iwi
 
 Idol Web Image module for adaptive image resizing and caching in database, based on Kohana Image module.
 
-Next methods are available: 
+Next methods are available:
 * crop()
 * rotate()
 * flip()
