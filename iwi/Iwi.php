@@ -6,7 +6,7 @@ Yii::import('application.extensions.iwi.models.Storage');
 class Iwi extends Image
 {
 
-    public function adaptive($width, $height, $upscale = null)
+    public function adaptive($width, $height, $upscale = false)
     {
 
         if ($this->image) {
