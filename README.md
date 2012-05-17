@@ -16,7 +16,7 @@ Next methods are available:
 
 
 * cache()
-  Returns image path in cache folder or empty string when image not find.
+  Returns image path in cache folder or empty string when image not find. 
   Requires database.
 
 * adaptive()
@@ -25,7 +25,7 @@ Next methods are available:
   [integer] $height height in pixels of the resizing image
   [bool] $upscale upscale is a boolean and controls if the image can be upscaled or not.
   This method is chainable.
-  Example: 
+  *Example:*
         $image->load("images/totem.png")->adaptive(200,200)->cache();
 
 
