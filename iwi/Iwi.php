@@ -6,6 +6,43 @@ Yii::import('application.extensions.iwi.models.Storage');
 class Iwi extends Image
 {
 
+    public function adaptive($width, $height, $bool = false)
+    {
+
+        if ($this->image) {
+
+            if (!$bool) {
+                if ($width > $this->image["width"])
+                    $width = $this->image["width"];
+
+                if ($height > $this->image["height"])
+                    $height = $this->image["height"];
+            }
+
+            $width = intval($width);
+            $height = intval($height);
+
+            $widthProportion = $width / $this->image["width"];
+            $heightProportion = $height / $this->image["height"];
+
+            if ($widthProportion > $heightProportion) {
+                $newWidth = $width;
+                $newHeight = round($newWidth / $this->image["width"] * $this->image["height"]);
+            }
+            else
+            {
+                $newHeight = $height;
+                $newWidth = round($newHeight / $this->image["height"] * $this->image["width"]);
+            }
+
+            $this->resize($newWidth, $newHeight);
+
+            return $this->crop($width, $height, "center");
+
+        }
+        return false;
+    }
+
     public function cache()
     {
         $path = $this->buildPath() ? : "";
