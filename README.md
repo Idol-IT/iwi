@@ -20,14 +20,14 @@ Next methods are available:
   **Requires database.**
 
 * adaptive()
-  adaptive($width, $height, $upscale = false) is used to adaptive resize of images.    
-  **[integer]** $width width in pixels of the resizing image    
-  **[integer]** $height height in pixels of the resizing image    
-  **[bool]** $upscale upscale is a boolean and controls if the image can be upscaled or not.    
+  `adaptive($width, $height, $upscale = false)` is used to adaptive resize of images.    
+  [integer] $width width in pixels of the resizing image    
+  [integer] $height height in pixels of the resizing image    
+  [bool] $upscale upscale is a boolean and controls if the image can be upscaled or not.    
   This method is chainable.    
   
   *Example:*    
-                 $image->load("images/totem.png")->adaptive(200,200)->cache();
+  `$image->load("images/totem.png")->adaptive(200,200)->cache();`
 
 
 Installation
