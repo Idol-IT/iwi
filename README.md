@@ -25,7 +25,7 @@ Installation
 1.Place 'iwi' folder into 'protected/extensions/'
 
 2.Configuration (protected/config/main.php):
-```php
+``` php
     'iwi' => array(
         'class' => 'application.extensions.iwi.IwiComponent',
         // GD or ImageMagick
@@ -37,7 +37,7 @@ Installation
 
 Usage
 ====================
-```php
+``` php
     // loading
     Yii::import('ext.iwi.Iwi');
     $picture = new Iwi('images/sample.jpg');
@@ -50,7 +50,7 @@ Usage
 
 Deprecated
 ====================
-```php
+``` php
     $this->widget("ext.iwi.Resize");
 ```
 Widget Resize is now derpecated.  
