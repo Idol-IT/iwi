@@ -14,19 +14,10 @@ Next methods are available:
 
 [Detailed documentation](http://docs.kohanaphp.com/libraries/image)
 
-
 * cache()
-  Returns image path in cache folder or empty string when image not find.
-  Requires database.
-
 * adaptive()
-  adaptive($width, $height, $upscale = false) is used to adaptive resize of images.
-  [integer] $width width in pixels of the resizing image
-  [integer] $height height in pixels of the resizing image
-  [bool] $upscale upscale is a boolean and controls if the image can be upscaled or not.
-  This method is chainable.
-  *Example:*
-        $image->load("images/totem.png")->adaptive(200,200)->cache();
+
+[Additional tags](https://github.com/Idol-IT/iwi/wiki/Additional-tags)
 
 
 Installation
