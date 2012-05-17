@@ -25,19 +25,19 @@ Installation
 1.Place 'iwi' folder into 'protected/extensions/'
 
 2.Configuration (protected/config/main.php):
-```php
- 'iwi' => array(
-     'class' => 'application.extensions.iwi.IwiComponent',
-     // GD or ImageMagick
-     'driver' => 'GD',
-     // ImageMagick setup path
-     //'params'=>array('directory'=>'C:/ImageMagick'),
- ),
-```
+
+    'iwi' => array(
+         'class' => 'application.extensions.iwi.IwiComponent',
+         // GD or ImageMagick
+         'driver' => 'GD',
+         // ImageMagick setup path
+         //'params'=>array('directory'=>'C:/ImageMagick'),
+    ),
+
 
 Usage
 ====================
-``` php
+
     // loading
     Yii::import('ext.iwi.Iwi');
     $picture = new Iwi('images/sample.jpg');
@@ -46,13 +46,12 @@ Usage
 
     // chainable usage in template
     echo Yii::app()->iwi->load("images/totem.png")->crop(70,121,'center')->cache();
-```
+
 
 Deprecated
 ====================
-``` php
     $this->widget("ext.iwi.Resize");
-```
+
 Widget Resize is now derpecated.  
 Use `adaptive()` method now.
 
