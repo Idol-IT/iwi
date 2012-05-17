@@ -19,7 +19,7 @@ Next methods are available:
   Returns image path in cache folder or empty string when image not find.     
   **Requires database.**
 
-* adaptive()
+* adaptive()    
   `adaptive($width, $height, $upscale = false)` is used to adaptive resize of images.    
   [integer] $width width in pixels of the resizing image    
   [integer] $height height in pixels of the resizing image    
