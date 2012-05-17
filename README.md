@@ -61,6 +61,9 @@ Use `adaptive()` method now.
 Changelog
 =====================
 
+#### May 17, 2012
+* `adaptive()` combination of resize & crop, helps to making thumbnail.
+
 #### May 15, 2012
 
 * Version 1.1 release
