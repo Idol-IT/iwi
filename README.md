@@ -53,7 +53,7 @@ Deprecated
 
     $this->widget("ext.iwi.Resize");
 
-Widget Resize is now derpecated.
+Widget Resize is now derpecated.  
 Use `adaptive()` method now.
 
 
