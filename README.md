@@ -25,8 +25,9 @@ Next methods are available:
   **[integer]** $height height in pixels of the resizing image    
   **[bool]** $upscale upscale is a boolean and controls if the image can be upscaled or not.    
   This method is chainable.    
-  **Example:**    
-        $image->load("images/totem.png")->adaptive(200,200)->cache();
+  
+  *Example:*    
+                 $image->load("images/totem.png")->adaptive(200,200)->cache();
 
 
 Installation
