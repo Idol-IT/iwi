@@ -25,7 +25,7 @@ Installation
 1.Place 'iwi' folder into 'protected/extensions/'
 
 2.Configuration (protected/config/main.php):
-``` php
+```php
 'iwi' => array(
 'class' => 'application.extensions.iwi.IwiComponent',
 // GD or ImageMagick
