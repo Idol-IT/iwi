@@ -16,7 +16,7 @@ Next methods are available:
 
 
 * cache()
-  Returns image path in cache folder or empty string when image not find. 
+  Returns image path in cache folder or empty string when image not find.   
   Requires database.
 
 * adaptive()
