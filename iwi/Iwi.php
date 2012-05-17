@@ -6,6 +6,7 @@ Yii::import('application.extensions.iwi.models.Storage');
 class Iwi extends Image
 {
 
+
     public function adaptive($width, $height, $upscale = false)
     {
 
@@ -115,8 +116,8 @@ class Iwi extends Image
 
     public function verifyTable()
     {
-        if (!Yii::app()->db->schema->getTable('storage')) {
-            Yii::app()->db->createCommand()->createTable("storage", array(
+        if (!Yii::app()->getDb()->schema->getTable('storage')) {
+            Yii::app()->getDb()->createCommand()->createTable("storage", array(
                 'key' => 'string',
                 'value' => 'text',
             ));
