@@ -61,6 +61,10 @@ Changelog
 =====================
 
 #### May 17, 2012
+* Recreating cache if cache is missing
+* If the original image is overwritten, the cache will be changed
+
+#### May 17, 2012
 * `adaptive()` combination of resize & crop, helps to making thumbnail.
 
 #### May 15, 2012
