@@ -48,7 +48,7 @@ class Iwi extends Image
     {
         $path = $this->buildPath() ? : "";
         if ($path) {
-            if ($this->createOrNone()) {
+            if ($this->createOrNone() || !file_exists($path)) {
                 $this->save($path);
             }
         }
@@ -97,6 +97,8 @@ class Iwi extends Image
     {
         $needle = $this->actions;
         array_unshift($needle, $this->image["file"]);
+        if(is_file($this->image["file"]))
+            array_unshift($needle, filemtime($this->image["file"]));
         return json_encode($needle);
     }
 
