@@ -60,7 +60,7 @@ Use `adaptive()` method now.
 Changelog
 =====================
 
-#### May 17, 2012
+#### July 25, 2012
 * Recreating cache if cache is missing
 * If the original image is overwritten, the cache will be changed
 
