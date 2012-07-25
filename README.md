@@ -27,11 +27,11 @@ Installation
 2.Configuration (protected/config/main.php):
 
     'iwi' => array(
-        'class' => 'application.extensions.iwi.IwiComponent',
-        // GD or ImageMagick
-        'driver' => 'GD',
-        // ImageMagick setup path
-        //'params'=>array('directory'=>'C:/ImageMagick'),
+         'class' => 'application.extensions.iwi.IwiComponent',
+         // GD or ImageMagick
+         'driver' => 'GD',
+         // ImageMagick setup path
+         //'params'=>array('directory'=>'C:/ImageMagick'),
     ),
 
 
@@ -50,7 +50,6 @@ Usage
 
 Deprecated
 ====================
-
     $this->widget("ext.iwi.Resize");
 
 Widget Resize is now derpecated.  
