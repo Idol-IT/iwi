@@ -24,7 +24,7 @@ class Storage extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'storage';
+		return '{{storage}}';
 	}
 
 	/**

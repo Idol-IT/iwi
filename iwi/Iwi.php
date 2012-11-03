@@ -5,8 +5,12 @@ Yii::import('application.extensions.iwi.models.Storage');
 
 class Iwi extends Image
 {
-
-
+    /**
+     * @param $width
+     * @param $height
+     * @param bool $upscale
+     * @return Iwi|object
+     */
     public function adaptive($width, $height, $upscale = false)
     {
 
@@ -29,9 +33,7 @@ class Iwi extends Image
             if ($widthProportion > $heightProportion) {
                 $newWidth = $width;
                 $newHeight = round($newWidth / $this->image["width"] * $this->image["height"]);
-            }
-            else
-            {
+            } else {
                 $newHeight = $height;
                 $newWidth = round($newHeight / $this->image["height"] * $this->image["width"]);
             }
@@ -41,12 +43,15 @@ class Iwi extends Image
             return $this->crop($width, $height, "center");
 
         }
-        return false;
+        return $this;
     }
 
+    /**
+     * @return mixed
+     */
     public function cache()
     {
-        $path = $this->buildPath() ? : "";
+        $path = $this->buildPath();
         if ($path) {
             if ($this->createOrNone() || !file_exists($path)) {
                 $this->save($path);
@@ -55,6 +60,9 @@ class Iwi extends Image
         return Yii::app()->createUrl($path);
     }
 
+    /**
+     * @return bool|string
+     */
     public function buildPath()
     {
         if (!isset($this->image["file"])) {
@@ -67,6 +75,9 @@ class Iwi extends Image
         return implode("/", $path);
     }
 
+    /**
+     * @return string
+     */
     public function buildDir()
     {
         $folder[] = YiiBase::getPathOfAlias('webroot.images.site.cache');
@@ -87,22 +98,29 @@ class Iwi extends Image
         return $path;
     }
 
+    /**
+     * @return string
+     */
     public function hash()
     {
         return md5($this->generateBrief());
     }
 
-
+    /**
+     * @return string
+     */
     protected function generateBrief()
     {
         $needle = $this->actions;
         array_unshift($needle, $this->image["file"]);
-        if(is_file($this->image["file"]))
+        if (is_file($this->image["file"]))
             array_unshift($needle, filemtime($this->image["file"]));
         return json_encode($needle);
     }
 
-
+    /**
+     * @return bool
+     */
     public function createOrNone()
     {
         $this->verifyTable();
@@ -116,17 +134,23 @@ class Iwi extends Image
         return false;
     }
 
+    /**
+     * Verify table
+     */
     public function verifyTable()
     {
-        if (!Yii::app()->getDb()->schema->getTable('storage')) {
-            Yii::app()->getDb()->createCommand()->createTable("storage", array(
+        if (!Yii::app()->getDb()->schema->getTable('{{storage}}')) {
+            Yii::app()->getDb()->createCommand()->createTable("{{storage}}", array(
                 'key' => 'string',
                 'value' => 'text',
             ));
         }
     }
 
-
+    /**
+     * @param $image
+     * @param null $config
+     */
     // changed exception
     public function __construct($image, $config = NULL)
     {
@@ -140,7 +164,7 @@ class Iwi extends Image
 
         // Check to make sure the image exists
         if (!is_file($image))
-            return false;
+            return $this;
 
         // Disable error reporting, to prevent PHP warnings
         $ER = error_reporting(0);
@@ -176,8 +200,7 @@ class Iwi extends Image
                 'driver' => 'GD',
                 'params' => array(),
             );
-        }
-        else {
+        } else {
             $this->config = $config;
         }
 

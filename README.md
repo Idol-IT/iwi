@@ -59,6 +59,9 @@ Use `adaptive()` method now.
 
 Changelog
 =====================
+### November 03, 2012
+* Added support of tablePrefix. Requested by the user: kernel32ddl
+* Fix error if image doesn't exist
 
 #### July 25, 2012
 * Recreating cache if cache is missing
