@@ -45,7 +45,7 @@ Usage
     echo $picture->cache();
 
     // chainable usage in template
-    echo Yii::app()->iwi->load("images/totem.png")->crop(70,121,'center')->cache();
+    echo Yii::app()->iwi->load("images/totem.png")->adaptive(250,120)->cache();
 
 
 Deprecated
